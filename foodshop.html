@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Create a column layout with Flexbox */
+.row {
+  display: flex;
+}
+
+/* Left column (menu) */
+.left {
+  flex: 35%;
+  padding: 15px 0;
+}
+
+.left h2 {
+  padding-left: 8px;
+}
+
+.flex {
+      display: flex;
+    justify-content: space-between;
+}
+
+/* Right column (page content) */
+.right {
+  flex: 65%;
+  padding: 15px;
+}
+.rright
+{
+      padding: 15px;
+    display: flex;
+}
+/* Style the search box */
+#mySearch {
+  width: 100%;
+  font-size: 18px;
+  padding: 11px;
+  border: 1px solid #ddd;
+}
+
+/* Style the navigation menu inside the left column */
+#myMenu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myMenu li a {
+  padding: 12px;
+  text-decoration: none;
+  color: black;
+  display: block
+}
+
+#myMenu li a:hover {
+  background-color: #eee;
+}
+img {
+    border-radius: 50%;
+    vertical-align: middle;
+    width: 94px;
+    height: 94px;
+}
+
+.bgdiv {
+      padding: 20px;
+    background: #fff;
+    border-radius: 25px;
+    height: 142px;
+    margin-right: 20px;
+}
+
+h1 {
+      font-size: 40px;
+    font-family: system-ui;
+}
+</style>
+<script>
+  function myFunction() {
+  var input, filter, ul, li, a, i;
+  ul = document.getElementById("myMenu");
+  li = ul.getElementsByTagName("li");
+  for (i = 0; i < li.length; i++) {
+    a = li[i].getElementsByTagName("a")[0];
+    if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
+    }
+  }
+}
+</script>
+</head>
+<body>
+<div class="row">
+  <div class="left">
+    <h2>Lorem<br>
+    Ipsum</h2>
+    <ul id="myMenu">
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Cusine</a></li>
+      <li><a href="#">Gallery</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><a href="#">Book</a></li>
+      
+    </ul>
+  </div>
+  
+  <div class="right" style="background-color:#ddd;">
+    
+    <div class="flex">
+        <h1>What are you <br> having for Lunch ?</h1> 
+          <h4>Lorern ipsum dolor sit amet,<br>
+    consectetur adipiscing elit,<br>
+    sed do eiusmod tempor<br>
+    incididunt ut labore et.</h4>
+    </div>
+
+    
+      <div class="rright">
+        
+        <div class="bgdiv">
+              <img src= "first.jpg?tr=w-400,h-300,fo-auto">
+        </div>
+        <div class="bgdiv">
+    <img src="second.jpg">        </div>
+                  <div class="bgdiv">
+    <img src="third.jpg">         </div>
+                            <div class="bgdiv">
+    <img src="four.jpg">        </div>
+    
+
+  </div>
+</div>
+</div>
+</body>
+</html>
